@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+/* PRODUCTS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 60px 40px;
+}
+
+.product {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 6px;
+    height: auto;
+}
+
+.product h2 {
+    margin: 15px 0 5px;
+}
+
+.product p {
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+/* BUTTONS */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #d4d4d4;
+}
+
+/* ABOUT SECTION */
+.about {
+    background-color: #111;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+/* CART */
+.cart {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.cart ul {
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cart li {
+    margin-bottom: 10px;
+}
+
+#clear-cart {
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 5px 10px 0 0;
+    }
+
+    .products {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .about {
+        padding: 40px 20px;
+    }
+
+    .product h2 {
+        font-size: 18px;
+    }
+
+    .product p, .about p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
